@@ -1,0 +1,25 @@
+﻿@model List<Customer>
+
+<table style="border-collapse: collapse; width: 100%;">
+    <tr>
+        <th style="border: 1px solid black; padding: 8px;">Id</th>
+        <th style="border: 1px solid black; padding: 8px;">Name</th>
+        <th style="border: 1px solid black; padding: 8px;">Email</th>
+        <th style="border: 1px solid black; padding: 8px;">Address</th>
+        <th style="border: 1px solid black; padding: 8px;">Phone Number</th>
+        <th style="border: 1px solid black; padding: 8px;">Image URL</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="border: 1px solid black; padding: 8px;">@item.Id</td>
+            <td style="border: 1px solid black; padding: 8px;">@item.Name</td>
+            <td style="border: 1px solid black; padding: 8px;">@item.Email</td>
+            <td style="border: 1px solid black; padding: 8px;">@item.Address</td>
+            <td style="border: 1px solid black; padding: 8px;">@item.PhoneNumber</td>
+            <td style="border: 1px solid black; padding: 8px;">
+                <img src="~/Images/@item.ImageUrl" alt="Customer Image" style="max-width: 100px; max-height: 100px;" />
+            </td>
+        </tr>
+    }
+</table>
